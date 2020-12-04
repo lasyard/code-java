@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/annotation/gen_sources/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/annotation/gen_sources/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/annotation/processor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/annotation/processor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/annotation/runtime/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/annotation/runtime/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/antlr4/array_init/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/antlr4/array_init/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/antlr4/simple_expr/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/antlr4/simple_expr/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jackson/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jackson/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/prop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/prop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quiz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quiz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/serdes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/serdes/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

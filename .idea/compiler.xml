@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="quiz" />
+        <module name="array_init" />
+        <module name="jackson" />
+        <module name="serdes" />
+        <module name="simple_expr" />
+        <module name="prop" />
+        <module name="gen_sources" />
+        <module name="runtime" />
+        <module name="processor" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="annotation" target="1.8" />
+      <module name="antlr4" target="1.8" />
+      <module name="array_init" target="1.8" />
+      <module name="gen_sources" target="1.8" />
+      <module name="jackson" target="1.8" />
+      <module name="java-parent" target="1.8" />
+      <module name="processor" target="1.8" />
+      <module name="prop" target="1.8" />
+      <module name="quiz" target="1.8" />
+      <module name="runtime" target="1.8" />
+      <module name="serdes" target="1.8" />
+      <module name="simple_expr" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
