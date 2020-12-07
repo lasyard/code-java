@@ -16,6 +16,7 @@
         <module name="gen_sources" />
         <module name="runtime" />
         <module name="processor" />
+        <module name="i18n" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
       <module name="antlr4" target="1.8" />
       <module name="array_init" target="1.8" />
       <module name="gen_sources" target="1.8" />
+      <module name="i18n" target="1.8" />
       <module name="jackson" target="1.8" />
       <module name="java-parent" target="1.8" />
       <module name="processor" target="1.8" />
