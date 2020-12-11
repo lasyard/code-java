@@ -64,6 +64,7 @@
         <module>serdes</module>
         <module>annotation</module>
         <module>i18n</module>
+        <module>opencsv</module>
     </modules>
 
     <properties>
@@ -80,6 +81,9 @@
 
         <!-- json schema -->
         <jsonschema-generator.version>4.16.0</jsonschema-generator.version>
+
+        <!-- opencsv -->
+        <opencsv.version>5.3</opencsv.version>
 
         <!-- facilities -->
         <lombok.version>1.18.16</lombok.version>
@@ -163,6 +167,13 @@
                 <groupId>com.github.victools</groupId>
                 <artifactId>jsonschema-module-jackson</artifactId>
                 <version>${jsonschema-generator.version}</version>
+            </dependency>
+
+            <!-- opencsv -->
+            <dependency>
+                <groupId>com.opencsv</groupId>
+                <artifactId>opencsv</artifactId>
+                <version>${opencsv.version}</version>
             </dependency>
 
             <!-- facilities -->

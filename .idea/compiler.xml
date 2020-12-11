@@ -15,6 +15,7 @@
         <module name="prop" />
         <module name="gen_sources" />
         <module name="runtime" />
+        <module name="opencsv" />
         <module name="processor" />
         <module name="i18n" />
       </profile>
@@ -27,6 +28,7 @@
       <module name="i18n" target="1.8" />
       <module name="jackson" target="1.8" />
       <module name="java-parent" target="1.8" />
+      <module name="opencsv" target="1.8" />
       <module name="processor" target="1.8" />
       <module name="prop" target="1.8" />
       <module name="quiz" target="1.8" />
