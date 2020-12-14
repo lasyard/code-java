@@ -66,6 +66,7 @@
         <module>i18n</module>
         <module>opencsv</module>
         <module>js</module>
+        <module>utils</module>
     </modules>
 
     <properties>
@@ -97,8 +98,7 @@
         <!-- apache commons -->
         <commons-configuration.version>1.10</commons-configuration.version>
         <commons-configuration2.version>2.7</commons-configuration2.version>
-        <commons-lang3.version>3.10</commons-lang3.version>
-        <commons-text.version>1.8</commons-text.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
 
         <!-- avro -->
@@ -121,6 +121,7 @@
         <!-- testing -->
         <junit.version>4.12</junit.version>
         <hamcrest.version>2.2</hamcrest.version>
+        <mockit.version>3.6.28</mockit.version>
 
         <!-- plugins -->
         <maven-surefire.version>3.0.0-M5</maven-surefire.version>
@@ -223,6 +224,11 @@
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons-beanutils.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
 
             <!-- avro -->
             <dependency>
@@ -274,6 +280,11 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockit.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

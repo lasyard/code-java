@@ -9,16 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="quiz" />
         <module name="array_init" />
-        <module name="jackson" />
-        <module name="serdes" />
         <module name="simple_expr" />
-        <module name="prop" />
-        <module name="gen_sources" />
         <module name="runtime" />
         <module name="opencsv" />
         <module name="js" />
         <module name="processor" />
         <module name="i18n" />
+        <module name="jackson" />
+        <module name="serdes" />
+        <module name="utils" />
+        <module name="prop" />
+        <module name="gen_sources" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,6 +38,7 @@
       <module name="runtime" target="1.8" />
       <module name="serdes" target="1.8" />
       <module name="simple_expr" target="1.8" />
+      <module name="utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
