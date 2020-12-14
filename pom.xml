@@ -65,6 +65,7 @@
         <module>annotation</module>
         <module>i18n</module>
         <module>opencsv</module>
+        <module>js</module>
     </modules>
 
     <properties>
