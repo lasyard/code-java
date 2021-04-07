@@ -18,6 +18,8 @@ package io.github.lasyard.code.jackson;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -37,7 +39,11 @@ public class JacksonTest {
 
     @BeforeClass
     public static void setupClass() {
-        mapper = new ObjectMapper();
+        mapper = JsonMapper.builder()
+            .addModule(new AfterburnerModule())
+            .build();
+        // don't need this if use @JsonSubTypes at base class.
+        // mapper.registerSubtypes(Dog.class, Cat.class);
         dog = new Dog();
         dog.setName("Goofy");
         cat = new Cat();

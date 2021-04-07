@@ -19,7 +19,8 @@ package io.github.lasyard.code.jackson;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.ToString;
 
-@JsonTypeName("cat")
+@JsonTypeName(Cat.NAME)
 @ToString(callSuper = true)
 class Cat extends Animal {
+    public static final String NAME = "cat";
 }
