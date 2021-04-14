@@ -16,15 +16,27 @@
 
 package io.github.lasyard.code.serdes;
 
+import org.apache.avro.Schema;
+import org.apache.avro.generic.GenericData;
+import org.apache.avro.generic.GenericDatumReader;
+import org.apache.avro.generic.GenericDatumWriter;
+import org.apache.avro.generic.GenericRecord;
+import org.apache.avro.io.DatumReader;
+import org.apache.avro.io.DatumWriter;
+import org.apache.avro.io.DecoderFactory;
+import org.apache.avro.io.EncoderFactory;
+import org.apache.avro.util.Utf8;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.nio.ByteBuffer;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -54,5 +66,26 @@ public class AvroTest {
         User user1 = new User();
         user1.readExternal(ois);
         assertThat(user1, is(user));
+    }
+
+    @Test
+    public void test2() throws IOException {
+        Schema schema = new Schema.Parser().parse(new File("src/main/avro/user.avsc"));
+        GenericRecord user = new GenericData.Record(schema);
+        user.put("name", "Alice");
+        user.put("score", 100);
+        DatumWriter<GenericRecord> datumWriter = new GenericDatumWriter<>(schema);
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        datumWriter.write(user, EncoderFactory.get().directBinaryEncoder(out, null));
+        DatumReader<GenericRecord> datumReader = new GenericDatumReader<>(schema);
+        byte[] result = out.toByteArray();
+        ByteArrayInputStream in = new ByteArrayInputStream(result);
+        GenericRecord user1 = datumReader.read(null, DecoderFactory.get().directBinaryDecoder(in, null));
+        Object name = user1.get("name");
+        assertThat(name, instanceOf(Utf8.class));
+        assertThat(name.toString(), is("Alice"));
+        Object score = user1.get("score");
+        assertThat(score, instanceOf(Integer.class));
+        assertThat(user1.get("score"), is(100));
     }
 }
